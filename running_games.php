@@ -112,5 +112,5 @@ $reponse = $bdd->query("SELECT ID_game, game_title, type_game, id_joueur1, id_jo
 </div>
 
 
-<a class="back_butt_login" id="back_rank" href="accueil_partie.php"><img  src="Ressources/img/back.png"></a>
+<a class="back_butt_login" id="back_rank" href="accueilPartie.php"><img  src="Ressources/img/back.png"></a>
 </div>

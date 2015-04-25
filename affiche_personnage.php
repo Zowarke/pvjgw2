@@ -11,10 +11,12 @@
 		}
 		?>
 			<div id="<?php echo($statut_pers); ?>" class="personnages">
+
 				
 					<img id = "peau" class="vetement" src="Ressources/personnages/<?php echo($donnees['peau']); ?>.png ">
 					<img  id="yeux" class="vetement" src="Ressources/personnages/<?php echo($donnees['yeux']); ?>.png">
 				<?php
+				
 				if($donnees['lunette'] != "")
 				{
 					?>	
@@ -70,6 +72,18 @@
 				}
 
 				?> <div class="prenom" > <?php echo($donnees['nom']); ?> </div>
+				<?php
+					if($statut_pers == "en_jeu")
+				{
+					?>
+					<form class="croix" action="elim_pers.php" method="POST">
+						<input id="croix_rouge" type="submit" value = "">
+						<input type="hidden" name ="pers" value="<?php echo($donnees['nom']);?>">
+						<input type="hidden" name ="id_game" value="<?php echo($id_game); ?>">
+					</form>
+					<?php
+				}
+				?>
 
 				
 

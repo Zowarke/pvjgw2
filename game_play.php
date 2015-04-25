@@ -11,13 +11,49 @@ $donnees = $reponse->fetch();
 		<?php
 		if($donnees['id_joueur1'] == $login_user)
 		{
+
 			$joueur_adverse = $donnees['id_joueur2'];
 			$reponse = $bdd->query("SELECT * FROM pnj WHERE id_game = '$id_game' AND id_user = '$joueur_adverse' "); //affiche la palette de personnage du joueur adverse
 			include("affiche_personnage.php");
+			if(isset($_SESSION['reponse']))
+			{
+				
+				$class=$_SESSION['juste-faux'];
+				?> <div class="<?php echo($class);?>"> <?php
+				echo ($_SESSION['reponse']);
+				unset($_SESSION['reponse']);
+				?> </div><?php
+			}
 			$reponse = $bdd->query("SELECT prenom_pers_joueur1 FROM game WHERE id_joueur1 = '$login_user' AND id_game='$id_game'  "); //récupère le nom du personnage choisi au hasard
 			$donnees = $reponse->fetch();
 			$prenom_pers_joueur = $donnees['prenom_pers_joueur1'];
 			$reponse = $bdd -> query("SELECT * FROM pnj WHERE id_user = '$login_user' AND nom = '$prenom_pers_joueur' AND id_game='$id_game' "); //affiche ce personnage
+			$reponse2 = $bdd->query("SELECT count(ID_character) AS somme FROM pnj WHERE statut_character = 1 AND id_game = '$id_game' AND id_user != '$login_user'");
+			while($donnees2 = $reponse2->fetch())
+			{
+				if($donnees2['somme'] == 1)
+				{
+					$reponse3 = $bdd->query("SELECT nom FROM pnj WHERE statut_character = 1 AND id_game = '$id_game' AND id_user != '$login_user'");
+					$donnees3 = $reponse3->fetch();
+					$prenom_dernier_pers = $donnees3['nom'];
+					$reponse4 = $bdd->query("SELECT prenom_pers_joueur2 FROM game WHERE id_joueur1 = '$login_user' AND id_game='$id_game'  ");
+					$donnees4 = $reponse4->fetch();
+					$prenom_joueur1_test = $donnees4['prenom_pers_joueur2'];
+					if($prenom_dernier_pers == $prenom_joueur1_test)
+					{
+						?><div class="partie_gagnee"><?php
+						echo("YOU WON THE GAME! :D");
+						?></div><?php
+					}
+					else
+					{
+						?><div class="partie_perdue"><?php
+						echo("Sorry, that's not the good character... :'( You lost!");
+						?></div><?php
+					}
+					
+				}
+			}
 			
 			
 		}
@@ -26,6 +62,14 @@ $donnees = $reponse->fetch();
 			$joueur_adverse = $donnees['id_joueur1'];
 			$reponse = $bdd->query("SELECT * FROM pnj WHERE id_game = '$id_game' AND id_user = '$joueur_adverse'  ");
 			include("affiche_personnage.php");
+			if(isset($_SESSION['reponse']))
+			{
+				$class = $_SESSION['juste-faux'];
+				?> <div class="<?php echo($class);?>"><?php
+				echo ($_SESSION['reponse']);
+				unset($_SESSION['reponse']);
+				?> </div><?php
+			}
 			$reponse = $bdd->query("SELECT prenom_pers_joueur2 FROM game WHERE id_joueur2 = '$login_user' AND id_game='$id_game' ");
 			$donnees = $reponse->fetch();
 			$prenom_pers_joueur = $donnees['prenom_pers_joueur2'];
@@ -37,6 +81,7 @@ $donnees = $reponse->fetch();
 			 <div class="pers_joueur">
 			 <p>Your opponent has to find this person!</p> <?php
 			include("affiche_personnage.php");
+
 			?> </div>
 
 			<?php
@@ -68,28 +113,6 @@ $donnees = $reponse->fetch();
 					<input type="checkbox" name="question" value="haut_bleu" />Has he/she got haut bleu?<br>
 					<input type="checkbox" name="question" value="haut_gris" />Has he/she got haut gris?<br>
 				</div>
-				<div class="clothe_question">
-					<p> Clothes questions </p>
-					<input type="checkbox" name="question" value="haut_rouge" />Has he/she got haut rouge?<br>
-					<input type="checkbox" name="question" value="haut_noir" />Has he/she got haut noir?<br>
-					<input type="checkbox" name="question" value="haut_vert" />Has he/she got haut vert?<br>
-					<input type="checkbox" name="question" value="haut_jaune" />Has he/she got haut jaune?<br>
-					<input type="checkbox" name="question" value="haut_bleu" />Has he/she got haut bleu?<br>
-				</div>
-				<div class="clothe_question">
-					<p> Clothes questions </p>
-					<input type="checkbox" name="question" value="haut_rouge" />Has he/she got haut rouge?<br>
-					<input type="checkbox" name="question" value="haut_noir" />Has he/she got haut noir?<br>
-					<input type="checkbox" name="question" value="haut_vert" />Has he/she got haut vert?<br>
-					<input type="checkbox" name="question" value="haut_jaune" />Has he/she got haut jaune?<br>
-					<input type="checkbox" name="question" value="haut_bleu" />Has he/she got haut bleu?<br>
-				</div>
-				<div class="accessory_question">
-					<p> Clothes questions </p>
-					<input type="checkbox" name="question" value="glasses" />Has he/she got glasses?<br>
-					<input type="checkbox" name="question" value="necklace" />Has he/she got necklace?<br>
-					
-				</div>
 				<input type="text" name="name" placeholder="Have an idea?">
 				<input type="submit" value ="Ask!">
 
@@ -107,6 +130,10 @@ $donnees = $reponse->fetch();
 	</div>
 	<a class="back_butt_login" id="back_gameplay" href="running_games.php"><img  src="Ressources/img/back.png"></a>
 </div>
+
+<?php
+include('Footer.php');
+?>
 
 
 

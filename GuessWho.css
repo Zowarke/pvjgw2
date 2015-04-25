@@ -857,6 +857,34 @@ input[type="radio"]:checked + label::before{
 	padding-top: 70px;
 }
 
+.bonne_reponse{
+	font-size: 40px;
+	color: #00B800;
+}
+.mauvaise_reponse{
+	font-size: 40px;
+	color: #FF0000;
+}
+
+#croix_rouge{
+	background-image: url(Ressources/img/croix_rouge.png);
+	height: 32px;
+	width: 33px;
+	border-radius: 20px;
+	position: relative;
+	margin-top: -80px;
+}
+.partie_gagnee{
+	font-size: 50px;
+	color: #00B800;
+	text-align: center;
+}
+.partie_perdue{
+	font-size: 50px;
+	color: #FF0000;
+	text-align: center;
+}
+
 .prenom{
 	position: relative;
 	margin-top: 240px;
