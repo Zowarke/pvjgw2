@@ -1,0 +1,913 @@
+html{
+	height: 100%;
+	overflow-x: hidden;
+}
+
+body{
+	background-image: url(Ressources/img/Background2.png);
+	font-family: 'Lobster Two', cursive;
+	color: #B68750;
+	margin: 0px;
+	min-height: 100%;
+	position: relative;
+}
+
+section:before{
+	height: 100%;
+}
+
+/************ scrollbar ************/
+
+::-webkit-scrollbar {
+    width: 1vw;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 1vw;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 1vw;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
+/*****************************************************  header  ***********************************************************/
+
+header #logo{
+	display: inline-block;
+}
+
+header #deco{
+	position: absolute;
+	border-radius: 40px;
+	display: inline-block;
+	margin-right: 220px;
+	margin-top: 10px;
+	cursor: pointer;
+	right: 0px;
+	top: 0px;
+}
+
+header #deco img{
+	position: absolute;
+}
+
+header #deco #logoutHover{
+	visibility: hidden;
+    opacity: 0;
+    -webkit-transition-property: visibility, opacity;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-property: visibility, opacity;
+    -moz-transition-duration: 0.5s;
+}
+
+header #deco:hover #logoutHover{
+    visibility: visible;
+    opacity: 1;
+}
+
+header #deco #logoutPush{
+	opacity: 0;
+}
+
+header #deco:active #logoutPush{
+	opacity: 1;
+}
+
+header #dec{
+	position: absolute;
+	right: 250px;
+	top: 10px;
+	margin-top: 14px;
+	font-weight: bold;
+	font-size: 30px;
+}
+
+header aside{
+	top: 30%;
+	position: absolute;
+	right: 2px;
+	display: inline-block;
+}
+
+header aside div{
+	position: relative;
+}
+
+header aside a, header aside p{
+	position: relative;
+	z-index: 2;
+	right: 2.5vw;
+	font-size: 1vw;
+	margin-top: 1vw;
+}
+
+header aside img{
+	position: absolute;
+	right: 0px;
+	z-index: 1;
+	width: 14vw;
+}
+
+
+/*****************************************************  footer  ***********************************************************/
+
+footer{
+	background-image: url(Ressources/img/sol.png);
+	position: absolute;
+	bottom: 0px;
+	height: 68px;
+	width: 100%;
+}
+
+footer p{
+	position: absolute;
+	color: #a16d35;
+	bottom: 0px;
+	margin-bottom: 4px;
+	margin-left: 30px;
+	font-size: 20px;
+	z-index: 1;
+}
+
+/*****************************************************  panneau de présentation  ***********************************************************/
+
+.welcome{
+	width: 56.5%;
+	max-height: 30%;
+	margin: auto;
+	position: relative;
+	z-index: 2;
+	font-size: 2.6vw;
+}
+
+.welcome #textHaut{
+	padding-top: 15%;
+	margin-bottom: 15%;
+}
+
+.welcome .panneau{
+	position: absolute;
+	width: 92%;
+	margin-left: 3.7%;
+}
+
+.welcome p{
+	width: 84%;
+	margin: auto;
+	text-align: center;
+	position: relative;
+}
+
+.welcome div p{
+	text-align: left;
+	margin-left: 12%;
+	width: 84%;
+	position: relative;
+}
+
+.welcome div{
+	display: inline-block;
+	width: 100%;
+}
+
+.welcome #next{
+	float: right;
+	margin-right: 11%;
+	margin-top: -5.8%;
+	width: 6.8%;
+	height: 6.8%;
+	position: relative;
+}
+
+.welcome #next img{
+	box-shadow: 0 0 25px 2px #B68750;
+	border-radius: 50%;
+	width: 100%;
+	position: absolute;
+}
+
+.welcome #next #nextHover, .back .backHover, #pLogin div #subHover, #creation #gameHover{
+	visibility: hidden;
+    opacity: 0;
+    -webkit-transition-property: visibility, opacity;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-property: visibility, opacity;
+    -moz-transition-duration: 0.5s;
+}
+
+.welcome #next:hover #nextHover, .back:hover .backHover, #pLogin div:hover #subHover, #creation:hover #gameHover{
+    visibility: visible;
+    opacity: 1;
+}
+
+.welcome #next #nextPush, .back .backPush, #pLogin div #subPush, #creation #gamePush{
+	opacity: 0;
+}
+
+.welcome #next:active #nextPush, .back:active .backPush, #pLogin div:active #subPush, #creation:active #gamePush{
+	opacity: 1;
+}
+
+/*****************************************************  accueil  ***********************************************************/
+
+#liAccueil{
+	margin-top: 0px;
+	padding-top: 19.25%;
+	list-style-type: none;
+	text-align: center;
+	font-size: 2.6vw;
+	margin-bottom: 1.5%;
+	padding-left: 5.24%;
+}
+
+#liAccueil li a{
+	display: inline-block;
+	margin: auto;
+	text-decoration: none;
+	color: #B68750;
+	width: 100%;
+	-webkit-transition-property: color;
+    -webkit-transition-duration: 1s;
+    -moz-transition-property: color;
+    -moz-transition-duration: 1s;
+}
+
+#liAccueil #login{
+	border-top: 1px solid #B68750;
+}
+
+#liAccueil li{
+	padding: 1.4% 2.08% 1.4% 2.08%;
+	border-bottom: solid 1px #B68750;
+	margin: auto;
+	width: 57.4%;
+	position: relative;
+	cursor: pointer;
+	-webkit-transition-property: background-color;
+    -webkit-transition-duration: 1s;
+    -moz-transition-property: background-color;
+    -moz-transition-duration: 1s;
+}
+
+#liAccueil li:hover{
+	background-color: #B68750;
+	color: #F8E8B0;
+}
+
+#liAccueil li:hover a{
+	color: #F8E8B0;	
+}
+
+.back{
+	float: left;
+	margin-left: 10%;
+	width: 6.8%;
+	height: 6.8%;
+	position: relative;
+}
+
+.back img{
+	box-shadow: 0 0 25px 2px #B68750;
+	border-radius: 50%;
+	width: 100%;
+	position: absolute;
+}
+
+/*****************************************************  Rules  ***********************************************************/
+
+#rules{
+	position: relative;
+	padding-top: 6%;
+	width: 88%;
+	padding-left: 7.5%;
+	font-size: 1.05vw;
+}
+
+#rules h3{
+	margin-top: 1.7%;
+	margin-bottom: 1.3%;
+}
+
+#rules #rWin{
+	width: 64.8%;
+	margin-bottom: 3%;
+}
+
+/*****************************************************  Login  ***********************************************************/
+
+#pLogin{
+	position: relative;
+	width: 100%;
+	padding-top: 9%;
+	font-size: 1.8vw;
+}
+
+#pLogin form input{
+	padding-left: 2%;
+	outline: none;
+	display: block;
+	background-color: transparent;
+	border-bottom: 1px solid #B68750;
+	border-radius: 1vw;
+	margin-bottom: 4%;
+	color: #B68750;
+	border: 1px solid #B68750;
+}
+
+#pLogin h2{
+	margin-left: 28.5%;
+}
+
+#pLogin div#log{
+	position: relative;
+	width: 100%;
+	margin-left: 39.6%;
+	margin-bottom: 5%;
+}
+
+#pLogin div#log img{
+	position: absolute;
+	width: 20%;
+}
+
+#pLogin input[type="submit"]{
+	box-shadow: 0 0 25px 2px #B68750;
+	position: absolute;
+	cursor: pointer;
+	width: 19.3%;
+	margin-left: 0.5%;
+	height: 3.48vw;
+	border: none;
+	z-index: 6;
+	border-radius: 1.2vw;
+}
+
+#pLogin .back{
+	margin-top: 5%;
+	margin-left: 28%;
+}
+
+#pLogin input[type="text"], #pLogin input[type="password"], #pLogin input[type="email"]{
+	font-size: 1.75vw;
+	margin-left: 26.5%;
+	height: 4.2vw;
+	width: 43.7%;
+	box-shadow: 0 0 15px 2px;
+}
+
+#pLogin input[type="text"]:focus, #pLogin input[type="password"]:focus, #pLogin input[type="email"]:focus{
+	background-color: #B68750;
+	color: #F8E8B0;
+}
+
+#pLogin input::-webkit-input-placeholder{
+	color: #B68750;
+}
+
+#pLogin input:focus::-webkit-input-placeholder{
+	color: #F8E8B0;
+}
+
+/*****************************************************  Creation compte  ***********************************************************/
+
+#cCompte .welcome{
+	width: 62%;
+	margin: auto;
+}
+
+#nCompte{
+	position: relative;
+	width: 80%;
+	padding-top: 12%;
+	margin-left: 10%;
+}
+
+#formCompte{
+	height: 100%;
+}
+
+#formCompte input{
+	margin: auto;
+	display: block;
+	background: transparent;
+	border: 1px solid #B68750;
+	border-radius: 1vw;
+	margin-bottom: 4.6%;
+}
+
+#formCompte input[type="text"], #formCompte input[type="password"], #formCompte input[type="email"]{
+	padding-left: 2%;
+	color: #B68750;
+	font-size: 1.75vw;
+	height: 4.2vw;
+	width: 50%;
+	box-shadow: 0 0 15px 2px;
+}
+
+#formCompte input[type="text"]:focus, #formCompte input[type="password"]:focus, #formCompte input[type="email"]:focus{
+	background-color: #B68750;
+	color: #F8E8B0;
+}
+
+#formCompte input::-webkit-input-placeholder{
+	color: #B68750;
+}
+
+#formCompte input:focus::-webkit-input-placeholder{
+	color: #F8E8B0;
+}
+
+input::-moz-placeholder{
+	color: #8e5a1d;
+}
+
+input:focus::-moz-placeholder{
+	color: #ffeca8;
+}
+
+#formCompte input[type="password"], #formCompte input[type="email"], #formCompte input[type="text"],  select{
+	outline: none;
+}
+
+#formCompte input[type="submit"]{
+	box-shadow: 0 0 25px 2px #B68750;
+	position: absolute;
+	cursor: pointer;
+	width: 98%;
+	margin-left: 0.5%;
+	height: 3.48vw;
+	border: none;
+	z-index: 6;
+	border-radius: 1.2vw;
+	outline: none;
+}
+
+#cCompte .back{
+	margin-left: 0%;
+}
+
+#nCompte div{
+	position: relative;
+	display: inline-block;
+	margin-bottom: 15%;
+	margin-left: 23.6%;
+	width: 22%;
+}
+
+#nCompte div img{
+	width: 100%;
+	position: absolute;
+	z-index: 5;
+}
+
+#nCompte div #compteHover{
+	visibility: hidden;
+    opacity: 0;
+    -webkit-transition-property: visibility, opacity;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-property: visibility, opacity;
+    -moz-transition-duration: 0.5s;
+}
+
+#nCompte div:hover #compteHover{
+    visibility: visible;
+    opacity: 1;
+}
+
+#nCompte div #comptePush{
+	opacity: 0;
+}
+
+#nCompte div:active #comptePush{
+	opacity: 1;
+}
+
+/*****************************************************  mot de passe  ***********************************************************/
+
+#nCompte #error{
+	position: absolute;
+	margin-left: 3%;
+	width: 30%;
+	color: red;
+	font-size: 1.1vw;
+}
+
+#errorLog{
+	padding-top: 2%;
+	color: red;
+	width: 50%;
+	margin: auto;
+	font-size: 1.6vw;
+	margin-left: 30%;
+}
+
+/*****************************************************  Classement  ***********************************************************/
+
+#classement{
+	margin: auto;
+	padding-top: 18%;
+}
+
+#entete{
+	font-size: 1.6vw;
+	height: auto;
+	position: absolute;
+	margin-top: -3.7vw;
+}
+
+#entete th{
+	padding-bottom: 1.5vw;
+}
+
+.ligneTab{
+	font-size: 1.3vw;
+	height: 2.5vw;
+	position: relative;
+	padding-left: 2%;
+}
+
+#classement tbody{
+	display: inline-block;
+	height: 15.5vw;
+	overflow: auto;
+	margin-left: -1vw;
+}
+
+#classement{
+	display: inline-block;
+	text-align: center;
+}
+
+#classement th{
+	width: 10vw;
+}
+
+#tableau{
+	position: relative;
+	height: 6vw;
+	text-align: left;
+	padding-left: 3%;
+}
+
+#tableau .back{
+	margin-top: 5%;
+	width: 8%;
+}
+
+#tableau #classCach{
+	margin-top: 0px;
+}
+
+.back{	
+	margin-left: 30%;
+	margin-bottom: 1px;
+}
+
+/*****************************************************  Menu game  ***********************************************************/
+
+#Mmenu .welcome .panneau, #createGame .welcome .panneau{
+	width: 55vw;
+	margin-left: 0px;
+}
+
+#entour_menu{
+	margin: auto;
+	padding-top: 10%;
+	height: 34vw;
+	width: 97.56%;
+}
+
+.create_game{
+	position: relative;
+	display: inline-block;
+	font-size: 4.2vw;
+	text-align: center;
+	margin-left: 4%;
+	text-decoration: none;
+	width: 91%;
+	height: 18%;
+	padding-top: 0.7%;
+	color: #B68750;
+	background-color: #faeec7;
+	border: 3px solid #B68750;
+	-webkit-transition-property: color, background-color;
+	-webkit-transition-duration: 0.8s;    
+	-moz-transition-property: color, background-color;
+    -moz-transition-duration: 0.8s;
+	border-radius: 2vw;
+}
+
+.create_game:hover{
+	background-color: #B68750;
+	color: #faeec7;
+}
+
+#taillecube, #taillecube2, #taillecube p, #taillecube2 p{
+	position: relative;
+	-webkit-transition-property: color, background-color;
+	-webkit-transition-duration: 0.8s;
+	-moz-transition-property: color, background-color;
+    -moz-transition-duration: 0.8s;
+}
+
+#taillecube, #taillecube2{
+	margin-top: 1%;
+	padding-top: 2.5%;
+	width: 30%;
+	height: 42%;
+	margin-bottom: 1%;
+	display: inline-block;
+	font-size: 3.4vw;
+	border: 3px solid #B68750;
+	background: #faeec7;
+	text-decoration: none;
+	border-radius: 2vw;
+}
+
+#taillecube{
+	margin-left: 4%;
+}
+
+#taillecube2{
+	float: right;
+	margin-right: 4.4%;
+}
+
+#taillecube p , #taillecube2 p{
+	color: #B68750;
+	text-align: center;
+	margin-left: 9%;
+}
+
+#taillecube:hover, #taillecube2:hover{
+	background-color: #B68750;
+}
+
+#taillecube:hover p, #taillecube2:hover p{
+	color: #faeec7;
+}
+
+/*****************************************************  Create a game  ***********************************************************/
+
+#createGame #create input[type="text"]{
+	position: absolute;
+	margin-top: 14%;
+	margin-left: 25.6%;
+	display: block;
+	color: #B68750;
+	font-size: 1.8vw;
+	height: 4vw;
+	width: 45%;
+	box-shadow: 0 0 15px 2px;
+	background: none;
+	border: 1px solid #B68750;
+	border-radius: 1vw;
+	outline: none;
+	text-align: center;
+}
+
+#createGame #create input[type="text"]:focus{
+	background-color: #B68750;
+	color: #F8E8B0;
+}
+
+#createGame #create input::-webkit-input-placeholder{
+	color: #B68750;
+}
+
+#createGame #create input:focus::-webkit-input-placeholder{
+	color: #F8E8B0;
+}
+
+#radio{
+	width: 40%;
+	margin-top: 30%;
+	margin-left: 30.5%;
+	position: relative;
+	margin-bottom: 8%;
+}
+
+#createGame #create input[type="radio"]{
+	display: none;
+} 
+
+#createGame #create label{
+	cursor: pointer;
+	font-size: 4vw
+}
+
+input[type="radio"] + label::before{
+	cursor: pointer;
+	display: inline-block;
+	content: "";
+	width: 12%;
+	height: 2.65vw;
+	background: #F8E8B0;
+	border-radius: 0.5vw;
+	border: 1px solid #B68750;
+	-webkit-transition-property: color, background-color;
+	-webkit-transition-duration: 0.5s;
+	-moz-transition-property: color, background-color;
+    -moz-transition-duration: 0.5s;
+}
+
+input[type="radio"]:checked + label::before{
+	background: #B68750;
+	color:#F8E8B0;
+}
+
+#create .back{
+	margin-left: 27%;
+}
+
+#create #creation{
+	position: relative;
+	display: inline-block;
+	margin-left: 18%;
+	width: 19%;
+	height: 3.5vw;
+}
+
+#create #creation input{
+	height: 100%;
+	border-radius: 1vw;
+	border: none;
+	background: none;
+	z-index: 5;
+	cursor: pointer;
+}
+
+#create #creation input:focus{
+	outline: none;
+}
+
+#create #creation input, #create #creation img{
+	position: absolute;
+	width: 100%;
+}
+
+/*****************************************************  rejoindre jeu  ***********************************************************/
+
+#join_button{
+	width: 105px;
+	height: 35px;
+	border-radius: 35px;
+	border: none;
+	background: url("Ressources/img/join_button.png");
+	cursor: pointer;
+}
+
+.no_one{
+	font-style: italic;
+}
+
+/*****************************************************  Creation personnage  ***********************************************************/
+
+.background_personnage{
+	margin-left: 30px;
+	margin: auto;
+	background-image: url(Ressources/img/gameplay.png);
+	position: relative;
+	width: 2188px;
+	height: 1994px;
+}
+
+.encadre_personnage{
+	padding-left: 30px;
+	padding-top: 160px;
+	margin: auto;
+	width: 1955px;
+	height: 935px;
+}
+
+.personnages{
+	border-radius: 20px;
+	background-color: #faeec7;;
+	position: relative;
+	width: 220px;
+	height: 300px;
+	display: inline-block;
+	border: solid 2px #B68750;
+	margin-bottom: 12px;
+	margin-right: 10px;
+}
+
+
+
+.personnages img{
+	position: absolute;
+}
+
+#hors_jeu{
+	opacity: 0.3;
+}
+
+.vetement{
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+#peau{
+	width: 109px;
+	padding-top: 25px;
+
+}
+
+#haut{
+	padding-top: 142px;
+	width: 175;
+}
+
+#cheveux_homme{
+	padding-top: 7px;
+	width: 129;
+	height: 
+}
+
+#cheveux_femme{
+	width: 158px;
+}
+#collier{
+	width: 60px;
+	padding-top: 130px;
+}
+
+
+#barbe{
+	width: 88px;
+	height: 74px;
+	padding-top: 77px;
+
+}
+
+
+#lunette{
+	padding-top: 80px;
+}
+
+#moustache{
+	padding-top: 105px;
+}
+
+#yeux{
+	width: 46px;
+	padding-top: 70px;
+}
+
+.prenom{
+	position: relative;
+	margin-top: 240px;
+	text-align: center;
+	font-size: 40px;
+}
+
+.pers_joueur{
+	margin-left: 700px;
+	margin-top: 120px;
+	font-size: 30px;
+	width: 550px;
+	height: 600px;
+	border-bottom: solid 2px #B68750;
+}
+
+.pers_joueur .personnages{
+	margin-left: 150px;
+}
+
+#back_gameplay img{
+	margin-left: 150px;
+	margin-top: 750px;
+}
+
+.partie_basse div{
+	display: inline-block;
+
+}
+
+.question{
+	vertical-align: top;
+	margin-top: 123px;
+	font-size: 30px;
+	height: 600px;
+}
+.question div{
+	display: inline-block;
+}
+.question p{
+	text-align: center;
+	font-size: 40px;
+}
+
+.question input[type="checkbox"]{
+	width: 40px;
+	height: 40px;
+}
+
+.question_droite{
+	vertical-align: top;
+	margin-top: 5px;
+	margin-left: 30px;
+}
