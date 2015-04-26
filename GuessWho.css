@@ -831,31 +831,14 @@ input[type="radio"]:checked + label::before{
 	margin-top: -80px;
 }
 .partie_gagnee{
-	display: block;
 	font-size: 50px;
 	color: #00B800;
 	text-align: center;
-	margin-bottom: 100px;
 }
 .partie_perdue{
-	display: block;
 	font-size: 50px;
 	color: #FF0000;
 	text-align: center;
-}
-
-.lien_partie_gagnee a{
-	display: block;
-	text-decoration: none;
-	font-size: 50px;
-	text-align: center;
-	margin-bottom: 30px;
-}
-.info_partie_gagnee{
-	font-size: 50px;
-	text-align: center;
-	margin-left: 300px;
-	margin-right: 300px;
 }
 
 .prenom{
@@ -866,8 +849,6 @@ input[type="radio"]:checked + label::before{
 }
 
 .pers_joueur{
-
-	text-align:center;
 	margin-left: 700px;
 	margin-top: 120px;
 	font-size: 30px;
@@ -877,8 +858,7 @@ input[type="radio"]:checked + label::before{
 }
 
 .pers_joueur .personnages{
-	display: block;
-	margin-left: 145px;
+	margin-left: 150px;
 }
 
 #back_gameplay img{
