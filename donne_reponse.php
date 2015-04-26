@@ -33,6 +33,59 @@ while($donnees = $reponse->fetch())
 					}
 					
 					break;
+
+					case 'lunette':
+					if($donnees['lunette'] != NULL)
+					{
+						$_SESSION['reponse'] = "Yes, the caracter has got glasses!";
+						$_SESSION['juste-faux'] = "bonne_reponse";	
+					}
+					else
+					{
+						$_SESSION['reponse'] = "No, the caracter hasn't got glasses!";
+						$_SESSION['juste-faux'] = "mauvaise_reponse";
+					}
+					break;
+
+					case 'collier':
+					if($donnees['collier'] != NULL)
+					{
+						$_SESSION['reponse'] = "Yes, the caracter has got a nucklace!";
+						$_SESSION['juste-faux'] = "bonne_reponse";	
+					}
+					else
+					{
+						$_SESSION['reponse'] = "No, the caracter hasn't got a nucklace!";
+						$_SESSION['juste-faux'] = "mauvaise_reponse";
+					}
+					break;
+
+					case 'moustache':
+					if($donnees['moustache'] != NULL)
+					{
+						$_SESSION['reponse'] = "Yes, the caracter has got a mustache!";
+						$_SESSION['juste-faux'] = "bonne_reponse";	
+					}
+					else
+					{
+						$_SESSION['reponse'] = "No, the caracter hasn't got a mustache!";
+						$_SESSION['juste-faux'] = "mauvaise_reponse";
+					}
+					break;
+
+					case 'barbe':
+					if($donnees['barbe'] != NULL)
+					{
+						$_SESSION['reponse'] = "Yes, the caracter has got a beard!";
+						$_SESSION['juste-faux'] = "bonne_reponse";	
+					}
+					else
+					{
+						$_SESSION['reponse'] = "No, the caracter hasn't got a beard!";
+						$_SESSION['juste-faux'] = "mauvaise_reponse";
+					}
+					break;
+					
 					case 'noir':
 					if($donnees['couleur_poil'] == "noir")
 					{

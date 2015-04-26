@@ -169,12 +169,20 @@ if($joueur_gagnant == "")
 					</div>
 					<div class="clothe_question">
 						<p> Clothes questions </p>
-						<input type="checkbox" name="question" value="haut_rouge" />Has he/she got haut rouge?<br>
-						<input type="checkbox" name="question" value="haut_noir" />Has he/she got haut noir?<br>
-						<input type="checkbox" name="question" value="haut_vert" />Has he/she got haut vert?<br>
-						<input type="checkbox" name="question" value="haut_jaune" />Has he/she got haut jaune?<br>
-						<input type="checkbox" name="question" value="haut_bleu" />Has he/she got haut bleu?<br>
-						<input type="checkbox" name="question" value="haut_gris" />Has he/she got haut gris?<br>
+						<input type="checkbox" name="question" value="haut_rouge" />Has he/she got a red top?<br>
+						<input type="checkbox" name="question" value="haut_noir" />Has he/she got black?<br>
+						<input type="checkbox" name="question" value="haut_vert" />Has he/she got a green top?<br>
+						<input type="checkbox" name="question" value="haut_jaune" />Has he/she got a yellow top?<br>
+						<input type="checkbox" name="question" value="haut_bleu" />Has he/she got blue top?<br>
+						<input type="checkbox" name="question" value="haut_gris" />Has he/she got a grey top?<br>
+					</div>
+					<div class="boy_question">
+						<input type="checkbox" name="question" value="barbe" />Has he got a beard?<br>
+						<input type="checkbox" name="question" value="moustache" />Has he got mustache?<br>
+					</div>
+					<div class = "attribut_question">
+						<input type="checkbox" name="question" value="lunette" />Has he/she got glasses?<br>
+						<input type="checkbox" name="question" value="collier" />Has she got nucklace?<br>
 					</div>
 					<input type="text" name="name" placeholder="Have an idea?">
 					<input type="submit" value ="Ask!">
