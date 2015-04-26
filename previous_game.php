@@ -1,7 +1,7 @@
 <?php
 include("Header.php");
 $login_user = $_SESSION['login_user'];
-$reponse = $bdd->query("SELECT ID_game, game_title, statut_game, type_game, id_joueur1, id_joueur2, AuTourDe FROM game WHERE id_joueur1 = '$login_user' OR id_joueur2 = '$login_user' ");
+$reponse = $bdd->query("SELECT ID_game, game_title, statut_game, type_game, id_joueur1, id_joueur2, AuTourDe, joueur_gagnant FROM game WHERE id_joueur1 = '$login_user' OR id_joueur2 = '$login_user' ");
 ?>
 
 
@@ -25,7 +25,7 @@ $reponse = $bdd->query("SELECT ID_game, game_title, statut_game, type_game, id_j
 				Opponent
 			</TH>
 			<TH>
-				Turn
+				Winner
 			</TH>
 
 		</TR>
@@ -33,7 +33,7 @@ $reponse = $bdd->query("SELECT ID_game, game_title, statut_game, type_game, id_j
 			<?php
 			while($donnees = $reponse -> fetch())
 			{
-				if($donnees['statut_game'] != 0)
+				if($donnees['statut_game'] == 0)
 				{
 					?>
 					<TR class="ligne_tableau">
@@ -58,35 +58,11 @@ $reponse = $bdd->query("SELECT ID_game, game_title, statut_game, type_game, id_j
 							{
 								echo($donnees['id_joueur1']);
 							}
-							if($donnees['id_joueur2'] == "")
-							{
-								?>
-								<div class="no_one">
-								<?php
-								echo("No one for the moment");
-								?>
-								</div>
-								<?php
-							}
 							?>
 						</TH>
 						<TH>
 							<?php
-							if($login_user == $donnees['AuTourDe'])
-							{
-								?>
-								<a href="game_play.php?id_game=<?php echo($donnees['ID_game'])?>"><img src="Ressources/img/mine.png"></a>
-								<?php
-							}
-							else if($donnees['id_joueur2'] == "")
-							{
-								?> <img src="Ressources/img/alone.png"> <?php
-							}
-							else
-							{
-								?> <a href="game_play.php?id_game=<?php echo($donnees['ID_game'])?>"><img src="Ressources/img/not_mine.png"></a> <?php
-							}
-
+								echo($donnees['joueur_gagnant']);
 							?>
 						</TH>
 					</TR>
