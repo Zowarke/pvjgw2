@@ -11,7 +11,7 @@ include("Header.php");
 			<li><a href="ranking.php">Check ranking</a></li>
 			<li><a href="rules.php">Game rules</a></li>
 		</ul>
-		<a class="back" href="index.php"><img class="justBack" src="Ressources/img/back.png"><img class="backHover" src="Ressources/img/back_hover.png"><img class="backPush" src="Ressources/img/back_push.png"></a>
+		<a class="back" href="index.php"><img src="Ressources/img/back.png"><img class="backHover" src="Ressources/img/back_hover.png"><img class="backPush" src="Ressources/img/back_push.png"></a>
 	</div>
 </div>
 

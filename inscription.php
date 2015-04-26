@@ -65,9 +65,9 @@ else if(isset($_POST['username']))
 				<input type="password" name="cPass" placeholder="Confirm password" minlength="5" maxlength="50" required="required"> 
 				<input type="email" name="mail" placeholder="Email" autocomplete="off" required="required">
 				<a class="back" href="acceuil.php">
-					<img class="justBack" src="Ressources/img/back.png"><img class="backHover" src="Ressources/img/back_hover.png"><img class="backPush" src="Ressources/img/back_push.png">
+					<img src="Ressources/img/back.png"><img class="backHover" src="Ressources/img/back_hover.png"><img class="backPush" src="Ressources/img/back_push.png">
 				</a>
-				<div>
+				<div style="margin-left:21%;">
 					<input type="submit" value="">
 					<img id="creaCompte" src="Ressources/img/create.png"><img id="compteHover" src="Ressources/img/create_hover.png"><img id="comptePush" src="Ressources/img/create_push.png">
 				</div>
