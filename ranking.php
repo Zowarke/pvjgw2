@@ -11,65 +11,67 @@ $rank = 1;
 <div class="welcome">
 	<img class="panneau" src="Ressources/img/ranking.png">
 	<div id="tableau">
-		<table id="classement">
-			<colgroup>
-				<col span="5" width="1%"</col>
-			</colgroup>
-				<thead id="pclassement">
-					<tr>
-						<th>Rank</th>
-						<th>Name</th>
-						<th>Matches played</th>
-						<th>Matches won</th>
-						<th>Ratio</th>
-					</tr>
-				</thead>	
+		<TABLE id="classement">
+			<TR id="entete">
+				<TH>
+					Rank
+				</TH>
+				<TH>
+					Name
+				</TH>
+				<TH>
+					Matches played
+				</TH>
+				<TH>
+					Matches won
+				</TH>
+				<TH>
+					Ratio
+				</TH>
 			</TR>
 				<?php
 				while($donnees = $reponse -> fetch())
 				{
 					?>
-					<tbody>
-						<tr id="lclassement">
-							<td>
-								<?php
+					<TR class="ligneTab">
+						<TH>
+							<?php
 								echo($rank);
-								?>
-							</td>
-							<td>
-								<?php
-								echo($donnees['login_user']);
-								?>
-							</td>
-							<td>
-								<?php
-								echo($donnees['nbWin_user']);
-								?>
-							</td>
-							<td>
-								<?php
-								echo($donnees['nbPlayed_user']);
-								?>
-							</td>
-							<td>
-								<?php
-								/*$ratio = round($donnees['nbWin_user'] / $donnees['nbPlayed_user'], 2);
-								echo $ratio;*/
-								echo($donnees['ratio_user']);
-								$rank++;
-								?>
-							</td>
-						</tr>
-					</tbody>	
+							?>
+						</TH>
+						<TH>
+							<?php
+							echo($donnees['login_user']);
+							?>
+						</TH>
+						<TH>
+							<?php
+							echo($donnees['nbWin_user']);
+							?>
+						</TH>
+						<TH>
+							<?php
+							echo($donnees['nbPlayed_user']);
+							?>
+						</TH>
+						<TH class="ratio">
+							<?php
+							/*$ratio = round($donnees['nbWin_user'] / $donnees['nbPlayed_user'], 2);
+							echo $ratio;*/
+							echo($donnees['ratio_user']);
+							$rank++;
+							?>
+						</TH>
+					</TR>
 					<?php
 				}
 				$reponse->closeCursor();
 				?>
-		</table>
+		</TABLE>
+		<a class="back" href="acceuil.php">
+			<img class="justBack" src="Ressources/img/back.png"><img class="backHover" src="Ressources/img/back_hover.png"><img class="backPush" src="Ressources/img/back_push.png">
+		</a>
 	</div>
-	<a class="back" href="acceuil.php">
-		<img src="Ressources/img/back.png"><img class="backHover" src="Ressources/img/back_hover.png"><img class="backPush" src="Ressources/img/back_push.png">
-	</a>
 </div>
 	
 <?php
