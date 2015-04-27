@@ -67,10 +67,6 @@ else if(isset($_POST['username']))
 				<a class="back" href="acceuil.php">
 					<img src="Ressources/img/back.png"><img class="backHover" src="Ressources/img/back_hover.png"><img class="backPush" src="Ressources/img/back_push.png">
 				</a>
-				<div style="margin-left:21%;">
-					<input type="submit" value="">
-					<img id="creaCompte" src="Ressources/img/create.png"><img id="compteHover" src="Ressources/img/create_hover.png"><img id="comptePush" src="Ressources/img/create_push.png">
-				</div>
 				<div id="error">
 					<?php 
 					if($erreur == 'username') 
@@ -90,6 +86,10 @@ else if(isset($_POST['username']))
 						echo "";
 					}
 					?>
+				</div>
+				<div style="margin-left:21%;">
+					<input type="submit" value="">
+					<img id="creaCompte" src="Ressources/img/create.png"><img id="compteHover" src="Ressources/img/create_hover.png"><img id="comptePush" src="Ressources/img/create_push.png">
 				</div>
 			</form>
 		</div>

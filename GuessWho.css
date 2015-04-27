@@ -500,10 +500,10 @@ input:focus::-moz-placeholder{
 
 #nCompte #error{
 	position: absolute;
-	margin-left: 3%;
-	width: 30%;
+	margin-left: 33%;
 	color: red;
 	font-size: 1.1vw;
+	width:20%;
 }
 
 #errorLog{
@@ -520,7 +520,8 @@ input:focus::-moz-placeholder{
 #classement{
 	margin: auto;
 	padding-top: 18%;
-	margin-left: 10%;
+	margin-left: 2%;
+	width:90%;
 }
 
 #entete{
