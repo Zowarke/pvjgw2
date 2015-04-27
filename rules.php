@@ -19,8 +19,8 @@
 		<p id="rWin">
 			Each players get one yes or no question per turn and may only guess (to win the game) once per game. If a player successfully guesses their opponents hidden character then they win; if their guess is wrong then they lose.
 		</p>
+		<a class="back" href="acceuil.php"><img class="justBack" src="Ressources/img/back.png"><img class="backHover" src="Ressources/img/back_hover.png"><img class="backPush" src="Ressources/img/back_push.png"></a>
 	</div>
-	<a class="back" href="acceuil.php"><img class="justBack" src="Ressources/img/back.png"><img class="backHover" src="Ressources/img/back_hover.png"><img class="backPush" src="Ressources/img/back_push.png"></a>
 </div>
 
 <?php

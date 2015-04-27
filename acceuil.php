@@ -4,7 +4,7 @@ include("Header.php");
 
 <div class="welcome">
 	<img class="panneau" src="Ressources/img/Mmenu.png">
-	<div>
+	<div id="baccueil">
 		<ul id="liAccueil">
 			<li id="login"><a href="login.php">Login</a></li>
 			<li><a href="inscription.php">Create account</a></li>

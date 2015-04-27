@@ -7,7 +7,7 @@ include("Header.php");
 		<img class="panneau" src="Ressources/img/Menu.png">
 		<div id="entour_menu">
 			<a class="create_game" href="createGame.php">Create a game</a>
-			<a id="taillecube" href="">
+			<a id="taillecube" href="previous_game.php">
 				<p>My<br>previous<br>games</p>
 			</a>
 			<a id="taillecube2" href="running_games.php">

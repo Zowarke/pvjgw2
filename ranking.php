@@ -54,7 +54,7 @@ $rank = 1;
 							echo($donnees['nbPlayed_user']);
 							?>
 						</TH>
-						<TH class="ratio">
+						<TH>
 							<?php
 							/*$ratio = round($donnees['nbWin_user'] / $donnees['nbPlayed_user'], 2);
 							echo $ratio;*/
@@ -68,9 +68,10 @@ $rank = 1;
 				$reponse->closeCursor();
 				?>
 		</TABLE>
+		<p id="classback">
 		<a class="back" href="acceuil.php">
-			<img class="justBack" src="Ressources/img/back.png"><img class="backHover" src="Ressources/img/back_hover.png"><img class="backPush" src="Ressources/img/back_push.png">
-		</a>
+			<img src="Ressources/img/back.png"><img class="backHover" src="Ressources/img/back_hover.png"><img class="backPush" src="Ressources/img/back_push.png">
+		</a></p>
 	</div>
 </div>
 	

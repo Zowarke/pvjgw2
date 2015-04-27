@@ -259,12 +259,21 @@ footer p{
 	color: #F8E8B0;	
 }
 
+#baccueil .back{
+	float: left;
+	margin-left: 10%;
+	width: 6.8%;
+	height: 6.8%;
+	position: relative;
+	margin-bottom: 1px;
+}
 .back{
 	float: left;
 	margin-left: 10%;
 	width: 6.8%;
 	height: 6.8%;
 	position: relative;
+	margin-bottom: 1px;
 }
 
 .back img{
@@ -292,6 +301,10 @@ footer p{
 #rules #rWin{
 	width: 64.8%;
 	margin-bottom: 3%;
+}
+
+#rules .back{
+	margin-left: 3%;
 }
 
 /*****************************************************  Login  ***********************************************************/
@@ -322,7 +335,7 @@ footer p{
 #pLogin div#log{
 	position: relative;
 	width: 100%;
-	margin-left: 39.6%;
+	margin-left: 43%;
 	margin-bottom: 5%;
 }
 
@@ -381,6 +394,10 @@ footer p{
 	width: 80%;
 	padding-top: 12%;
 	margin-left: 10%;
+}
+
+#formCompte .back{
+	margin-left: 25%;
 }
 
 #formCompte{
@@ -443,10 +460,6 @@ input:focus::-moz-placeholder{
 	outline: none;
 }
 
-#cCompte .back{
-	margin-left: 0%;
-}
-
 #nCompte div{
 	position: relative;
 	display: inline-block;
@@ -507,6 +520,7 @@ input:focus::-moz-placeholder{
 #classement{
 	margin: auto;
 	padding-top: 18%;
+	margin-left: 10%;
 }
 
 #entete{
@@ -516,6 +530,10 @@ input:focus::-moz-placeholder{
 	margin-top: -3.7vw;
 }
 
+.rungames{
+	margin-left: 8%;
+}
+
 #entete th{
 	padding-bottom: 1.5vw;
 }
@@ -523,8 +541,6 @@ input:focus::-moz-placeholder{
 .ligneTab{
 	font-size: 1.3vw;
 	height: 2.5vw;
-	position: relative;
-	padding-left: 2%;
 }
 
 #classement tbody{
@@ -537,6 +553,10 @@ input:focus::-moz-placeholder{
 #classement{
 	display: inline-block;
 	text-align: center;
+}
+
+#classback .back{
+	margin-left: 0%;
 }
 
 #classement th{
@@ -688,13 +708,41 @@ input:focus::-moz-placeholder{
 	margin-bottom: 8%;
 }
 
+.radio2{
+	position: relative;
+	display: inline-block;
+	width:18%;
+	vertical-align: top;
+}
+
+.radio2 p{
+	font-size: 1.5vw;
+	margin: none;
+	text-align: left;
+	margin-right:50%;
+	margin-bottom: 2%;
+	margin-top: 0px;
+}
+
 #createGame #create input[type="radio"]{
 	display: none;
 } 
 
 #createGame #create label{
 	cursor: pointer;
-	font-size: 4vw
+	font-size: 4vw;
+}
+
+#createGame #create p{
+	font-size: 2vw;
+	margin:none;
+	text-align: center;
+}
+
+#createGame #create .radiogameplay label{
+	cursor: pointer;
+	font-size: 1vw;
+	margin-top: 0px;
 }
 
 input[type="radio"] + label::before{
@@ -712,7 +760,27 @@ input[type="radio"] + label::before{
     -moz-transition-duration: 0.5s;
 }
 
+.radio2 input[type="radio"] + label::before{
+	cursor: pointer;
+	display: inline-block;
+	content: "";
+	width: 10%;
+	height: 1vw;
+	background: #F8E8B0;
+	border-radius: 0.5vw;
+	border: 1px solid #B68750;
+	-webkit-transition-property: color, background-color;
+	-webkit-transition-duration: 0.5s;
+	-moz-transition-property: color, background-color;
+    -moz-transition-duration: 0.5s;
+}
+
 input[type="radio"]:checked + label::before{
+	background: #B68750;
+	color:#F8E8B0;
+}
+
+.radio2 input[type="radio"]:checked + label::before{
 	background: #B68750;
 	color:#F8E8B0;
 }
@@ -793,8 +861,6 @@ input[type="radio"]:checked + label::before{
 	margin-right: 10px;
 }
 
-
-
 .personnages img{
 	position: absolute;
 }
@@ -812,7 +878,6 @@ input[type="radio"]:checked + label::before{
 #peau{
 	width: 109px;
 	padding-top: 25px;
-
 }
 
 #haut{
@@ -829,19 +894,17 @@ input[type="radio"]:checked + label::before{
 #cheveux_femme{
 	width: 158px;
 }
+
 #collier{
 	width: 60px;
 	padding-top: 130px;
 }
 
-
 #barbe{
 	width: 88px;
 	height: 74px;
 	padding-top: 77px;
-
 }
-
 
 #lunette{
 	padding-top: 80px;
@@ -854,6 +917,56 @@ input[type="radio"]:checked + label::before{
 #yeux{
 	width: 46px;
 	padding-top: 70px;
+}
+
+.bonne_reponse{
+	font-size: 40px;
+	color:#00B800;
+}
+
+.mauvaise_reponse{
+	font-size: 40px;
+	color:#FF0000;
+}
+
+#croix_rouge{
+	background-image: url(Ressources/img/croix_rouge.png);
+	height: 32px;
+	width: 33px;
+	border-radius: 20px;
+	position: relative;
+	margin-top: -80px;
+	margin-left: -10px;
+}
+
+.partie_gagnee{
+	display: block;
+	font-size: 50px;
+	color:#00B800;
+	text-align: center;
+	margin-bottom: 100px;
+}
+
+.partie_perdue{
+	display: block;
+	font-size: 50px;
+	color: #FF0000;
+	text-align: center;
+}
+
+.lien_partie_gagnee a{
+	display: block;
+	text-decoration: none;
+	font-size: 50px;
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.info_partie_gagnee{
+	font-size: 50px;
+	text-align: center;
+	margin-left: 300px;
+	margin-right: 300px;
 }
 
 .prenom{
@@ -883,7 +996,6 @@ input[type="radio"]:checked + label::before{
 
 .partie_basse div{
 	display: inline-block;
-
 }
 
 .question{
@@ -892,9 +1004,11 @@ input[type="radio"]:checked + label::before{
 	font-size: 30px;
 	height: 600px;
 }
+
 .question div{
 	display: inline-block;
 }
+
 .question p{
 	text-align: center;
 	font-size: 40px;

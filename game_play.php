@@ -152,44 +152,48 @@ if($joueur_gagnant == "")
 				$donnees = $reponse->fetch();
 				if($donnees['AuTourDe'] == $login_user)
 				{
-					?><form class="question" action = "game_play_inter.php" method="POST">
+					?>
+					<div id="createGame">
+					<form id="create" action = "game_play_inter.php" method="POST">
 					<input type="hidden" name = "game_title" value = <?php echo($id_game); ?>>
-					<p> Questions you can ask to your opponent!</p>
-					<div class="body_qestion">
+					<p style="margin-bottom:0px; margin-top:0px;"> Questions you can ask to your opponent!</p>
+					<div class="radiogameplay radio2">
 						<p> Body questions </p>
-						<input type="checkbox" name="question" value="couleur_peau" />Does the character has a white skin?<br>
-						<input type="checkbox" name="question" value="sexe" />Is it a boy?<br>
+						<input type="radio" name="question" value="couleur_peau" required="required" /><label> Does the character has a white skin?</label><br>
+						<input type="radio" name="question" value="sexe" /><label> Is it a boy?</label>
 					</div>
-					<div class="hairs_question">
+					<div class="radiogameplay radio2">
 						<p> Hairs questions </p>
-						<input type="checkbox" name="question" value="noir" />Has he/she got black hairs?<br>
-						<input type="checkbox" name="question" value="gris" />Has he/she got grey hairs?<br>
-						<input type="checkbox" name="question" value="blond" />Has he/she got blond hairs?<br>
-						<input type="checkbox" name="question" value="orange" />Has he/she got orange hairs?<br>
+						<input type="radio" name="question" value="noir" /><label> Has he/she got black hairs?</label><br>
+						<input type="radio" name="question" value="gris" /><label> Has he/she got grey hairs?</label><br>
+						<input type="radio" name="question" value="blond" /><label> Has he/she got blond hairs?</label><br>
+						<input type="radio" name="question" value="orange" /><label> Has he/she got orange hairs?</label>
 					</div>
-					<div class="clothe_question">
+					<div class="radiogameplay radio2">
 						<p> Clothes questions </p>
-						<input type="checkbox" name="question" value="haut_rouge" />Has he/she got a red top?<br>
-						<input type="checkbox" name="question" value="haut_noir" />Has he/she got black?<br>
-						<input type="checkbox" name="question" value="haut_vert" />Has he/she got a green top?<br>
-						<input type="checkbox" name="question" value="haut_jaune" />Has he/she got a yellow top?<br>
-						<input type="checkbox" name="question" value="haut_bleu" />Has he/she got blue top?<br>
-						<input type="checkbox" name="question" value="haut_gris" />Has he/she got a grey top?<br>
+						<input type="radio" name="question" value="haut_rouge" /><label> Has he/she got a red top?</label><br>
+						<input type="radio" name="question" value="haut_noir" /><label> Has he/she got black?</label><br>
+						<input type="radio" name="question" value="haut_vert" /><label> Has he/she got a green top?</label><br>
+						<input type="radio" name="question" value="haut_jaune" /><label> Has he/she got a yellow top?</label><br>
+						<input type="radio" name="question" value="haut_bleu" /><label> Has he/she got blue top?</label><br>
+						<input type="radio" name="question" value="haut_gris" /><label> Has he/she got a grey top?</label>
 					</div>
-					<div class="boy_question">
-						<input type="checkbox" name="question" value="barbe" />Has he got a beard?<br>
-						<input type="checkbox" name="question" value="moustache" />Has he got mustache?<br>
+					<div class="radiogameplay radio2">
+						<p> Beard questions </p>
+						<input type="radio" name="question" value="barbe" /><label> Has he got a beard?</label><br>
+						<input type="radio" name="question" value="moustache" /><label> Has he got mustache?</label>
 					</div>
-					<div class = "attribut_question">
-						<input type="checkbox" name="question" value="lunette" />Has he/she got glasses?<br>
-						<input type="checkbox" name="question" value="collier" />Has she got nucklace?<br>
+					<div class="radiogameplay radio2">
+						<p> Glasses questions </p>
+						<input type="radio" name="question" value="lunette" /><label> Has he/she got glasses?</label><br>
+						<input type="radio" name="question" value="collier" /><label> Has she got nucklace?</label><br>
 					</div>
 					<input type="text" name="name" placeholder="Have an idea?">
-					<input type="submit" value ="Ask!">
-
+					<div id="creation">
+						<input type="submit" value ="Ask!">
+					</div>
 				</form>
-
-
+				</div>
 					<?php
 				}
 			}
