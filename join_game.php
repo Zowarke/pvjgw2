@@ -5,14 +5,11 @@ $reponse = $bdd->query("SELECT game_title, type_game, id_joueur1, id_joueur2 FRO
 
 ?>
 
-
-<div class="welcome" id="background_join_games">
-
-<div class="tableau">
-	<TABLE class="classement_tableau">
-
-
-		<TR class="haut_tableau">
+<div class="welcome">
+<img class="panneau" src="Ressources/img/join_game.png">
+<div id="tableau">
+	<table id="classementJoin">
+		<tr id="enteteJoin">
 			<TH>
 				Name
 			</TH>
@@ -25,19 +22,17 @@ $reponse = $bdd->query("SELECT game_title, type_game, id_joueur1, id_joueur2 FRO
 			<TH>
 				Wanna join?
 			</TH>
-
-		</TR>
-
+		</tr>
 			<?php
 			while($donnees = $reponse -> fetch())
 			{
 				if($_SESSION['login_user'] <> $donnees['id_joueur1'])
 				{
 				?>
-					<TR class="ligne_tableau">
+					<tr class="ligneTab">
 						<TH>
 							<?php
-								echo($donnees['game_title']);
+							echo($donnees['game_title']);
 							?>
 						</TH>
 						<TH>
@@ -56,32 +51,18 @@ $reponse = $bdd->query("SELECT game_title, type_game, id_joueur1, id_joueur2 FRO
 								<input type="hidden" name = "game_title" value="<?php echo($donnees['game_title']);?>">
 							</form>
 						</TH>
-						
-					</TR>
-
-
+					</tr>
 				<?php
 				}
 			}
-
-
-
-
-
-
-
 			?>
-
-
 		</TR>	
-
-
-
-	</TABLE>
-
-
-
+	</table>
 </div>
-<div>
-<a class="back_butt_login" id="back_rank" href="accueil_partie.php"><img  src="Ressources/img/back.png"></a>
-</div>
+<p id="classback">
+	<a class="back" href="accueilPartie.php">
+	<img src="Ressources/img/back.png"><img class="backHover" src="Ressources/img/back_hover.png"><img class="backPush" src="Ressources/img/back_push.png">
+</a></p>
+<?php
+include("footer.php");
+?>

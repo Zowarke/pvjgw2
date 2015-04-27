@@ -524,11 +524,39 @@ input:focus::-moz-placeholder{
 	width:90%;
 }
 
+#classementJoin{
+	margin: auto;
+	padding-top: 18%;
+	margin-left: 2%;
+	display: inline-block;
+	margin-left: 15%;
+}
+
+#classementJoin tbody{
+	display: inline-block;
+	height: 15.5vw;
+	overflow: auto;
+	margin-left: -1vw;
+}
+
+#classementJoin #enteteJoin th{
+	margin-left: 0%;
+	width: 9vw;
+}
+
 #entete{
 	font-size: 1.6vw;
 	height: auto;
 	position: absolute;
 	margin-top: -3.7vw;
+}
+
+#enteteJoin{
+	font-size: 1.6vw;
+	height: auto;
+	position: absolute;
+	margin-top: -3.7vw;
+	width:35vw;
 }
 
 .rungames{
@@ -537,6 +565,14 @@ input:focus::-moz-placeholder{
 
 #entete th{
 	padding-bottom: 1.5vw;
+}
+
+#enteteJoin th{
+	padding-bottom: 1.5vw;
+}
+
+#classementJoin .ligneTab th{
+	width:9vw;
 }
 
 .ligneTab{

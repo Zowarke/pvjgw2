@@ -65,7 +65,7 @@ $reponse = $bdd->query("SELECT ID_game, game_title, statut_game, type_game, id_j
 				?>
 		</TABLE>
 		<p id="classback">
-		<a class="back" href="acceuil.php">
+		<a class="back" href="accueilPartie.php">
 			<img src="Ressources/img/back.png"><img class="backHover" src="Ressources/img/back_hover.png"><img class="backPush" src="Ressources/img/back_push.png">
 		</a></p>
 	</div>
